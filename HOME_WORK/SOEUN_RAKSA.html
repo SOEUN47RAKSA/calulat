@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html> 
+<head>
+    <meta charset=utf-8 />
+    <title>Soeun Raksa </title>
+   
+    <!-- css -->
+    <style>
+        form ,h3{
+            text-align: center;
+            border: 5px solid pink;
+            background-color: beige;
+        }
+        form h6{
+            text-align: center;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: aqua;
+        }
+        form {
+            background-color: azure;
+            box-shadow: 5px;
+            border: 10px solid black;
+            width: 400px;
+            padding: 40px;
+            border-radius: 8px;
+            margin: 20px auto;
+        }
+        table {
+            /* background-color: red; */
+            margin: auto;
+            border-spacing: 20px 20px;
+        }
+        input {
+            border: 1px solid gray;
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        input[type="button"]:hover {
+            background-color: rgb(173, 173, 224);
+        }
+
+        td p {
+            color: red;
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body><!-- body -->
+    <form><!-- form -->
+            <h3>Input Number for calculate</h3>
+        <table><!-- table -->
+            <tr>
+                <td><label for="num1">First number:</label></td>
+                <td><input type="text" id="num1"></td>
+            </tr>
+            <tr>
+                <td><label for="num2">Second number:</label></td>
+                <td><input type="text" id="num2"></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="Plus" onclick="plus()">
+                    <input type="button" value="Subtract" onclick="Subtract()">
+                </td>
+                <td>
+                    <input type="button" value="Multiply" onclick="Multiply()">
+                    <input type="button" value="Divide" onclick="Divide()">
+                </td>
+            </tr>
+            <tr>
+                <td><p>The result is: </p></td>
+                <td><p id="result"> </p></td>
+                
+            </tr>
+            
+        </table>
+        <h6>Develop by SRDVP</h6>
+    </form>
+</body>
+</html>
+<!-- javascript -->
+<script>
+    // define a function plus
+    function plus() {
+       
+       var num1 = document.getElementById("num1").value; // declare num1, num2 and get the values of the input fields
+       var num2 = document.getElementById("num2").value;
+      
+       num1 = parseInt(num1, 10); // convert string to numbers
+       num2 = parseInt(num2, 10);
+      
+       if(isNaN(num1) || isNaN(num2)) { // check the user input if no input number
+        alert("please input number before click buttons");
+       }
+       
+        document.getElementById("result").innerHTML = num1 + num2;// perform num1+num2 and output by ID result 
+    }
+            function Subtract() {
+                
+            var num1 = document.getElementById("num1").value;
+            var num2 = document.getElementById("num2").value;
+            
+            num1 = parseInt(num1, 10);
+            num2 = parseInt(num2, 10);
+            
+            if(isNaN(num1) || isNaN(num2)) {
+                alert("please input number before click buttons");
+            }
+            
+                document.getElementById("result").innerHTML = num1 - num2;
+            }
+                function Multiply() {
+                
+                var num1 = document.getElementById("num1").value;
+                var num2 = document.getElementById("num2").value;
+                
+                num1 = parseInt(num1, 10);
+                num2 = parseInt(num2, 10);
+                
+                if(isNaN(num1) || isNaN(num2)) {
+                    alert("please input number before click buttons");
+                }
+                
+                    document.getElementById("result").innerHTML = num1 * num2;
+                }
+                                function Divide() {
+                                    
+                                var num1 = document.getElementById("num1").value;
+                                var num2 = document.getElementById("num2").value;
+                                
+                                num1 = parseInt(num1, 10);
+                                num2 = parseInt(num2, 10);
+                                
+                                if(isNaN(num1) || isNaN(num2)) {
+                                    alert("please input number before click buttons");
+                                }
+                                
+                                    document.getElementById("result").innerHTML = num1 / num2;
+                                }
+</script>
+
+
